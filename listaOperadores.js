@@ -47,10 +47,10 @@ console.log(`Exercicio 6`);
 let p = true;
 let q = false;
 
-console.log(p && q);
-console.log(p || q);
-console.log(!p);
-console.log(!q);
+console.log(p && q); // => false
+console.log(p || q); // => true
+console.log(!p); // => false
+console.log(!q); // => true
 
 console.log();
 console.log(`Exercicio 7`);
