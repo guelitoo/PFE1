@@ -6,7 +6,16 @@ function validateNumber(n) {
 console.log(validateNumber(10));
 
 function validateUser(name, age) {
-  return typeof name === 'string' && name !== '' && typeof age === 'numero' && age >= 0;
+  if (typeof name !== 'string' || name.trim() === '') {
+      return false;
+  }
+  
+  if (typeof age !== 'numero' && age <= 0 || !Number.isInteger(age)) {
+      return true;
+  }
+  return true
 }
 
-console.log(validateUser(Miguel, 18));
+console.log(validateUser('miguel', 18));
+console.log(validateUser('', 12));
+console.log(validateUser('andreia', 11));
